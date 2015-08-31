@@ -1,6 +1,8 @@
 package co.starsky.wanikani.service;
 
+import android.content.Context;
 import co.starsky.wanikani.BuildConfig;
+import co.starsky.wanikani.util.Prefs;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,6 +37,24 @@ public final class ApiManager {
                     .create(WaniKaniService.class);
         }
         return WANIKANI_SERVICE;
+    }
+
+    public static boolean isWaniKaiApiKeyValid(final Context c) {
+        final String key = getWanikaniApiKey(c);
+        return !(key == null || key.isEmpty());
+    }
+
+    public static String getWanikaniApiKey(final Context c) {
+        if (WANIKANI_API_KEY == null) {
+            // Attempt to recover key from local storage
+            WANIKANI_API_KEY = Prefs.getWaniKaniApiKey(c);
+        }
+        return WANIKANI_API_KEY;
+    }
+
+    public static void setWanikaniApiKey(final Context c, final String key) {
+        WANIKANI_API_KEY = key;
+        Prefs.setWaniKaniApiKey(c, key);
     }
 
 }

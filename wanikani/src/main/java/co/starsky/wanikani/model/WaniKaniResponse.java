@@ -1,5 +1,7 @@
 package co.starsky.wanikani.model;
 
+import android.util.Log;
+import co.starsky.wanikani.BuildConfig;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
@@ -8,6 +10,7 @@ import java.io.Serializable;
  * @author alliecurry
  */
 public final class WaniKaniResponse<T> implements Serializable {
+    private static final String TAG = WaniKaniResponse.class.getSimpleName();
     private static final long serialVersionUID = -52167005595042619L;
 
     @SerializedName("requested_information") private T requestedInfo;
@@ -28,5 +31,11 @@ public final class WaniKaniResponse<T> implements Serializable {
 
     public User getUserInfo() {
         return userInfo;
+    }
+
+    public void logError() {
+        if (BuildConfig.DEBUG && error != null) {
+            Log.e(TAG, error.getLogOutput());
+        }
     }
 }
