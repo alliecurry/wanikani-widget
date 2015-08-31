@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">WaniKani Widget</string>
+    <string name="wanikani_kanji">鰐蟹</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="access_help">help</string>
+    <string name="login_prompt">The Crabigator stands in your way.</string>
+    <string name="bad_error">Something went horribly wrong.\nDid you try turning it off and on again?</string>
+    <string name="login_hint">Feed him your WaniKani API key</string>
 </resources>

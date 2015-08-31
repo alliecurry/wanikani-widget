@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/royal_blue"
+              android:gravity="center"
+        >
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:src="@drawable/art1"
+               android:scaleType="centerCrop"
+               android:layout_marginTop="250dp"
+            />
+
+    <EditText
+            android:id="@+id/login_input"
+            android:singleLine="true"
+            android:textColorHint="#CCC"
+            android:inputType="textNoSuggestions"
+            android:imeOptions="actionDone"
+            android:hint="@string/login_hint"
+            android:layout_centerInParent="true"
+            style="@style/LoginText"/>
+
+    <TextView
+            style="@style/LoginText"
+            android:layout_above="@id/login_input"
+            android:text="@string/login_prompt"
+            android:layout_marginBottom="@dimen/default_margin_large"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+
+    <ImageView
+            android:id="@+id/login_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:padding="8dp"
+            android:background="@android:color/white"
+            android:src="@android:drawable/ic_menu_help"
+            android:contentDescription="@string/access_help"
+            android:layout_marginRight="@dimen/default_margin_large"
+            />
+
+</RelativeLayout>

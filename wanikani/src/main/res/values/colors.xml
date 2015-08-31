@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="magenta">#F300A2</color>
+    <color name="orchid">#A035BA</color>
+    <color name="royal_blue">#3859DE</color>
+    <color name="royal_blue_status">#19339a</color>
+    <color name="cerulean">#009AE8</color>
+    <color name="gravel">#474747</color>
+
+</resources>
