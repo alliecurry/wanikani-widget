@@ -29,7 +29,7 @@
             android:layout_above="@id/login_input"
             android:text="@string/login_prompt"
             android:layout_marginBottom="@dimen/default_margin_large"
-            android:textSize="26sp"
+            android:textSize="@dimen/default_title_size"
             android:gravity="center"
             android:textStyle="bold"
             />

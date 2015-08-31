@@ -14,6 +14,7 @@ import android.widget.Toast;
 import co.starsky.wanikani.BuildConfig;
 import co.starsky.wanikani.R;
 import co.starsky.wanikani.controller.fragment.LoginFragment;
+import co.starsky.wanikani.controller.fragment.SessionFragment;
 import co.starsky.wanikani.service.ApiManager;
 
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.Log
     }
 
     private void showMainPage() {
-        // TODO
+        replaceFragment(new SessionFragment(), SessionFragment.TAG);
     }
 
     @Override
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.Log
         if (BuildConfig.DEBUG) {
             Toast.makeText(this, key, Toast.LENGTH_SHORT).show();
         }
+        clearBackStack(); // User should not be able to navigate back to login.
         showMainPage();
     }
 
