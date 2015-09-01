@@ -34,6 +34,15 @@
             android:textStyle="bold"
             />
 
+    <TextView
+            style="@style/LoginText"
+            android:id="@+id/login_error"
+            android:layout_below="@id/login_input"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            />
+
     <ImageView
             android:id="@+id/login_help"
             android:layout_width="wrap_content"
